@@ -28,8 +28,7 @@ public class StrictLineReaderTest {
   @Test public void lineReaderConsistencyWithReadAsciiLine() {
     try {
       // Testing with LineReader buffer capacity 32 to check some corner cases.
-      StrictLineReader lineReader =
-          new StrictLineReader(createTestInputStream(), 32, Util.US_ASCII);
+      StrictLineReader lineReader = new StrictLineReader(createTestInputStream(), 32, Util.US_ASCII);
       InputStream refStream = createTestInputStream();
       while (true) {
         try {
